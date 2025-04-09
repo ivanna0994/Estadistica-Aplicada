@@ -7516,9 +7516,10 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="%F0%9F%8C%A1%EF%B8%8F-Predicci%C3%B3n-de-la-Temperatura-del-Aire">🌡️ Predicción de la Temperatura del Aire<a class="anchor-link" href="#%F0%9F%8C%A1%EF%B8%8F-Predicci%C3%B3n-de-la-Temperatura-del-Aire">¶</a></h2><p>Comparación y Optimización de Modelos de Series de Tiempo y Aprendizaje Automático
-📌 Descripción del Proyecto
-Este proyecto analiza diferentes estrategias para predecir la temperatura del aire a partir de datos meteorológicos registrados por la estación del Instituto Max Planck de Bioquímica en Jena, Alemania.</p>
+<h2 id="%F0%9F%8C%A1%EF%B8%8F-Predicci%C3%B3n-de-la-Temperatura-del-Aire">🌡️ Predicción de la Temperatura del Aire<a class="anchor-link" href="#%F0%9F%8C%A1%EF%B8%8F-Predicci%C3%B3n-de-la-Temperatura-del-Aire">¶</a></h2><p>Comparación y Optimización de Modelos de Series de Tiempo y Aprendizaje Automático</p>
+<hr/>
+<p>📌 Descripción del Proyecto</p>
+<p>Este proyecto analiza diferentes estrategias para predecir la temperatura del aire a partir de datos meteorológicos registrados por la estación del Instituto Max Planck de Bioquímica en Jena, Alemania.</p>
 <p>Se busca responder:
 ¿Cuál es la estrategia más precisa y eficiente para predecir la temperatura del aire: modelos de series de tiempo que capturan autocorrelaciones o modelos de regresión basados en variables climáticas?</p>
 <p>También se explora la posibilidad de desarrollar un modelo mejorado que combine ambos enfoques: series de tiempo + aprendizaje automático.</p>
@@ -10351,22 +10352,61 @@ c:\Users\10Pearls\.conda\envs\proyecto_final\Lib\site-packages\statsmodels\tsa\b
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>🔢 Parámetros estimados
-Parámetro	Coef.	P-valor	Significativo
-AR(1)	-0.3756	0.010	✅ Sí
-MA(1)	0.1268	0.411	❌ No
-SAR(52)	0.4132	0.000	✅ Sí
-SMA(52)	-0.5849	0.000	✅ Sí
-Varianza	0.0560	0.000</p>
-<p>📊 Estadísticos del modelo
-AIC: 15.96 → muy bajo (excelente)
-BIC: 35.25
-Log-Likelihood: -2.98</p>
-<p>📉 Diagnóstico de residuos
-Ljung-Box p-valor: 0.82 → no hay autocorrelación en los residuos (✅)
-Jarque-Bera p-valor: 0.00 → residuos no normales (⚠️)
-Skew: -2.78 → asimetría negativa fuerte
-Kurtosis: 35.31 → leptocúrtico (picos y colas extremas)</p>
+<h3 id="%F0%9F%94%A2-Par%C3%A1metros-estimados">🔢 <strong>Parámetros estimados</strong><a class="anchor-link" href="#%F0%9F%94%A2-Par%C3%A1metros-estimados">¶</a></h3><table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Coef.</th>
+<th>P-valor</th>
+<th>Significativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AR(1)</td>
+<td>-0.3756</td>
+<td>0.010</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td>MA(1)</td>
+<td>0.1268</td>
+<td>0.411</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>SAR(52)</td>
+<td>0.4132</td>
+<td>0.000</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td>SMA(52)</td>
+<td>-0.5849</td>
+<td>0.000</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td>Varianza</td>
+<td>0.0560</td>
+<td>0.000</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="%F0%9F%93%8A-Estad%C3%ADsticos-del-modelo">📊 <strong>Estadísticos del modelo</strong><a class="anchor-link" href="#%F0%9F%93%8A-Estad%C3%ADsticos-del-modelo">¶</a></h3><ul>
+<li><strong>AIC</strong>: 15.96 → muy bajo (excelente)</li>
+<li><strong>BIC</strong>: 35.25</li>
+<li><strong>Log-Likelihood</strong>: -2.98</li>
+</ul>
+<hr/>
+<h3 id="%F0%9F%93%89-Diagn%C3%B3stico-de-residuos">📉 <strong>Diagnóstico de residuos</strong><a class="anchor-link" href="#%F0%9F%93%89-Diagn%C3%B3stico-de-residuos">¶</a></h3><ul>
+<li><strong>Ljung-Box p-valor</strong>: 0.82 → no hay autocorrelación en los residuos (✅)</li>
+<li><strong>Jarque-Bera p-valor</strong>: 0.00 → residuos no normales (⚠️)</li>
+<li><strong>Skew</strong>: -2.78 → asimetría negativa fuerte</li>
+<li><strong>Kurtosis</strong>: 35.31 → leptocúrtico (picos y colas extremas)</li>
+</ul>
 <p>El modelo ajusta bien y capta la estacionalidad semanal. Los residuos no son normales, pero eso es común en datos climáticos reales. Se puede usar este modelo para forecasting, o como base para un modelo mixto (ej. SARIMA + redes).</p>
 </div>
 </div>
@@ -10514,13 +10554,38 @@ Kurtosis: 35.31 → leptocúrtico (picos y colas extremas)</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>📊 Métricas de desempeño</p>
-<p>Métrica	  Valor	           Interpretación
-MAPE (%)	187.76 %	⚠️ Error porcentual elevado (posible escala baja o signo negativo en reales)
-MAE	        3.07 °C	       Error medio absoluto en grados Celsius
-MSE	        12.74	       Error cuadrático medio
-RMSE	    3.57 °C	          Raíz del error cuadrático medio
-Ljung-Box p	0.239	   ✅ No hay autocorrelación significativa en los residuos</p>
+<h3 id="%F0%9F%93%8A-M%C3%A9tricas-de-desempe%C3%B1o">📊 <strong>Métricas de desempeño</strong><a class="anchor-link" href="#%F0%9F%93%8A-M%C3%A9tricas-de-desempe%C3%B1o">¶</a></h3><table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Valor</th>
+<th>Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAPE (%)</td>
+<td>187.76 %</td>
+<td>⚠️ Error porcentual elevado (posible escala baja o signo negativo en reales)</td>
+</tr>
+<tr>
+<td>MAE</td>
+<td>3.07 °C</td>
+<td>Error medio absoluto en grados Celsius</td>
+</tr>
+<tr>
+<td>MSE</td>
+<td>12.74</td>
+<td>Error cuadrático medio</td>
+</tr>
+<tr>
+<td>RMSE</td>
+<td>3.57 °C</td>
+<td>Raíz del error cuadrático medio</td>
+</tr>
+</tbody>
+</table>
+<p>| Ljung-Box p  | 0.239     | ✅ No hay autocorrelación significativa en los residuos</p>
 </div>
 </div>
 </div>
